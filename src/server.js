@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
     console.log("from /")
-    res.send("Hi This is test version 2")
+    res.send("Hi This is test version 3")
 })
 
 app.get('/health', (req, res) => {
