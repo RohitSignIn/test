@@ -19,13 +19,13 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@13.203.161.48 "mkdir -p /home/ec2-user/app"
-          scp -o StrictHostKeyChecking=no -r * ec2-user@13.203.161.48:/home/ec2-user/app
+          ssh -o StrictHostKeyChecking=no ubuntu@13.203.161.48 "mkdir -p /home/ubuntu/app"
+          scp -o StrictHostKeyChecking=no -r * ubuntu@13.203.161.48:/home/ubuntu/app
 
       - name: SSH into EC2 and restart the application
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@13.203.161.48 << 'EOF'
-            cd /home/ec2-user/app
+          ssh -o StrictHostKeyChecking=no ubuntu@13.203.161.48 << 'EOF'
+            cd /home/ubuntu/app
             # Assuming you're using a Node.js app
             npm install
             pm2 restart app.js  # Adjust according to your setup
