@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     res.send("Hi This is test version 4")
 })
 
-app.get('/health', (req, res) => {
+app.get('/health', (req, res) => { 
     console.log("from Health")
     res.status(200).send({"message": "Its seems good over here"})
 })
