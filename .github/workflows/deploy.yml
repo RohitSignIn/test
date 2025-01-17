@@ -28,5 +28,5 @@ jobs:
             cd /home/ubuntu/app
             # Assuming you're using a Node.js app
             npm install
-            pm2 restart src/server.js  # Adjust according to your setup
+            pm2 start src/server.js  # Adjust according to your setup
           EOF
